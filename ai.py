@@ -20,7 +20,7 @@ implied volatility, distance out of the money, the 1-month trend, days to expiry
 and the extra gap risk of leveraged ETFs (NVDL, SOXL, etc.).
 
 Respond ONLY with JSON, no markdown, in exactly this shape:
-{"pick": "<TICKER or NONE>",
+{"pick": "<tICKER or NONE>",
  "confidence": "low" | "medium" | "high",
  "summary": "<2-3 sentences explaining the pick>",
  "risks": ["<risk>", "..."],
