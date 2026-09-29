@@ -7,3 +7,14 @@ python-dotenv
 anthropic
 google-genai
 alpaca-py>=0.30
+
+yfinance>=0.2.40
+pandas
+requests
+python-dotenv
+anthropic
+google-genai
+alpaca-py>=0.30
+fastapi>=0.110
+uvicorn[standard]>=0.29
+ å
