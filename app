@@ -27,24 +27,6 @@ import broker
 
 st.set_page_config(page_title="Weekly put scanner", page_icon="📉", layout="wide")
 
-# ---------- password gate ----------
-# Required when deployed (Render sets RENDER=true). Optional locally.
-APP_PASSWORD = os.getenv("APP_PASSWORD", "")
-if os.getenv("RENDER") and not APP_PASSWORD:
-    st.error("APP_PASSWORD is not set. Add it in Render → Environment before using this app.")
-    st.stop()
-if APP_PASSWORD and not st.session_state.get("authed"):
-    import hmac
-
-    st.title("Weekly put scanner")
-    pw = st.text_input("Password", type="password")
-    if pw and hmac.compare_digest(pw, APP_PASSWORD):
-        st.session_state.authed = True
-        st.rerun()
-    if pw:
-        st.error("Wrong password.")
-    st.stop()
-
 MAX_CONTRACTS = int(os.getenv("MAX_CONTRACTS", "1"))
 MAX_COLLATERAL_PCT = float(os.getenv("MAX_COLLATERAL_PCT", "0.25"))
 LIVE_ALLOWED = os.getenv("LIVE_TRADING", "").lower() == "true"
