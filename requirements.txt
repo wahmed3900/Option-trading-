@@ -1,13 +1,10 @@
 streamlit>=1.36
+flask>=3.0
 yfinance>=0.2.40
 altair
+pandas
 requests
 python-dotenv
 anthropic
 google-genai
 alpaca-py>=0.30
-yfinance>=0.2.40
-pandas
-requests
-alpaca-py>=0.30
-

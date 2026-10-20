@@ -109,8 +109,8 @@ def scan_ticker(ticker, target_delta, min_dte, max_dte, rate):
 # ---------- sidebar ----------
 with st.sidebar:
     st.header("Scan settings")
-    tickers_raw = st.text_input("Tickers (comma separated)", "NVDA, META, NVDL, SOXL")
-    target = st.slider("Target delta", 0.05, 0.40, 0.20, 0.01)
+    tickers_raw = st.text_input("Tickers (comma separated)", "NVDA, NVDL, NVDX, SOXL, TQQQ, SPXL")
+    target = st.slider("Target delta", 0.05, 0.40, 0.15, 0.01)
     dte_range = st.slider("Days to expiration", 1, 21, (4, 10))
     rate = st.number_input("Risk-free rate", 0.0, 0.10, 0.04, 0.005, format="%.3f")
     run = st.button("Scan", type="primary", use_container_width=True)
@@ -270,3 +270,4 @@ st.caption(
     "Data from Yahoo Finance, delayed. The AI only reviews; strike, size, and price come "
     "from the scan and your inputs. Not financial advice."
 )
+st.markdown("Need a brokerage account? [Open one at Fidelity ↗](https://www.fidelity.com/open-account/overview)")
