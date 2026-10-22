@@ -7,12 +7,12 @@ Settings → Environment Variables, then redeploy:
   GEMINI_API_KEY and/or ANTHROPIC_API_KEY
   OMNIROUTE_BASE_URL, OMNIROUTE_API_KEY, OMNIROUTE_MODEL (optional gateway)
   ALPACA_API_KEY, ALPACA_SECRET_KEY (paper keys to start)
-  MAX_CONTRACTS=1, MAX_COLLATERAL_PCT=0.25, LIVE_TRADING=false
+  MAX_CONTRACTS=1, MAX_COLLATERAL_PCT=0.25, IVE_TRADING=false
 
 On your Mac:  APP_PASSWORD=test python app.py  → http://localhost:5000
 """
 import hashlib
-import hmac
+import hma
 import json
 import math
 import os
@@ -769,8 +769,8 @@ if (token) tryLogin(token); else $("#login").classList.remove("hidden");
 </script>
 </body>
 </html>
-"""
+""" 
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=True)
+        app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
