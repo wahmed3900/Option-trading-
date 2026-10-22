@@ -7,12 +7,12 @@ Settings → Environment Variables, then redeploy:
   GEMINI_API_KEY and/or ANTHROPIC_API_KEY
   OMNIROUTE_BASE_URL, OMNIROUTE_API_KEY, OMNIROUTE_MODEL (optional gateway)
   ALPACA_API_KEY, ALPACA_SECRET_KEY (paper keys to start)
-  MAX_CONTRACTS=1, MAX_COLLATERAL_PCT=0.25, IVE_TRADING=false
+  MAX_CONTRACTS=1, MAX_COLATERAL_PCT=0.25, IVE_TRADING=false
 
 On your Mac:  APP_PASSWORD=test python app.py  → http://localhost:5000
 """
 import hashlib
-import hma
+import hmac
 import json
 import math
 import os
