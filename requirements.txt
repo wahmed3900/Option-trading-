@@ -8,3 +8,6 @@ python-dotenv
 anthropic
 google-genai
 alpaca-py>=0.30
+fastapi
+uvicorn[standard]
+robin-stocks
